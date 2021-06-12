@@ -1,0 +1,130 @@
+.about-us {
+  padding: 0 0 96px 0;
+  position: relative;
+
+  @media screen and (max-width: 321px) {
+    padding: 0 0 107px 0;
+  }
+
+  &__decor-left {
+    position: absolute;
+    top: -225px;
+    left: 0;
+
+    @media screen and (max-width: 321px) {
+      display: none;
+    }
+  }
+  &__decor-right {
+    position: absolute;
+    right: 0;
+    bottom: -363px;
+
+    @media screen and (max-width: 321px) {
+      width: 192px;
+      bottom: -112px;
+    }
+  }
+
+  &__decor-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (max-width: 321px) {
+      svg {
+        width: 133px;
+      }
+    }
+
+    svg {
+      width: 146px;
+      height: 8px;
+      fill: #d9c287;
+    }
+  }
+  &__header {
+    margin: 0 0 78px 0;
+    position: relative;
+    z-index: 1;
+
+    @media screen and (max-width: 321px) {
+      margin: 0 0 54px 0;
+    }
+  }
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+  &__title {
+    @extend %sbk-300;
+    font-size: 40px;
+    line-height: 56px;
+    text-align: center;
+    color: #3d3c3c;
+    margin: 0 0 42px 0;
+
+    @media screen and (max-width: 321px) {
+      font-size: 22px;
+      line-height: 31px;
+      margin: 0 0 20px 0;
+    }
+  }
+  &__decor-middle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 42px 0;
+
+    @media screen and (max-width: 321px) {
+      margin: 0 0 22px 0;
+
+      svg {
+        width: 30px;
+        height: 20px;
+      }
+    }
+
+    svg {
+      width: 62px;
+      height: 40px;
+      fill: #d9c287;
+    }
+  }
+  &__desc {
+    @extend %sbk-300;
+    font-size: 18px;
+    line-height: 32px;
+    text-align: center;
+    color: #333333;
+    max-width: 640px;
+    margin: 0 0 38px 0;
+
+    @media screen and (max-width: 321px) {
+      font-size: 16px;
+      line-height: 29px;
+      margin: 0 0 33px 0;
+    }
+  }
+  &__btn {
+    background: transparent;
+    border: 1px solid #d9c287;
+    border-radius: 8px;
+    padding: 23px 41px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: all ease-out 0.3s;
+
+    @media screen and (max-width: 321px) {
+      padding: 21px 34px;
+      letter-spacing: 0.25em;
+    }
+
+    &:hover {
+      background: #d9c287;
+    }
+  }
+}

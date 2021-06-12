@@ -1,0 +1,53 @@
+body {
+  @extend %euclid-500;
+  color: #3d3c3c;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.08em;
+  overflow-x: hidden;
+
+  @media screen and (max-width: 320px) {
+    font-size: 12px;
+    line-height: 22px;
+  }
+}
+
+.lock {
+  overflow: hidden;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    content: "";
+    background: rgba(255, 255, 255, 0.64);
+    z-index: 10;
+  }
+}
+
+.page {
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100%;
+  min-width: 320px;
+  max-width: 1190px;
+  padding: 0 15px;
+  margin: 0 auto;
+
+  @media screen and (max-width: 321px) {
+    padding: 0 13px;
+  }
+}
+
+@keyframes fade-slide {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

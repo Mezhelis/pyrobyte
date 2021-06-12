@@ -1,0 +1,269 @@
+.all-inclusive {
+  position: relative;
+  z-index: 1;
+  max-width: 1392px;
+  margin: 0 auto;
+  background: #f6f6f6;
+  border-radius: 24px;
+  overflow: hidden;
+
+  &__decor-left {
+    position: absolute;
+    left: -155px;
+    top: -101px;
+    width: 939px;
+    height: 971px;
+    z-index: -1;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__decor-right {
+    position: absolute;
+    right: -5px;
+    bottom: -304px;
+    width: 337px;
+    height: 1449px;
+    z-index: -1;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.all-inclusive-slider {
+  padding: 78px 0;
+
+  @media screen and (max-width: 321px) {
+    padding: 19px 0 0 0;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    padding: 0 0 58px 0;
+
+    @media screen and (max-width: 321px) {
+      justify-content: space-between;
+      padding: 0 0 30px 0;
+    }
+  }
+  &__title {
+    @extend %sbk-300;
+    font-size: 64px;
+    line-height: 56px;
+    color: #3d3c3c;
+    margin: 0 32px 0 0;
+
+    @media screen and (max-width: 321px) {
+      font-size: 23px;
+      line-height: 25px;
+    }
+  }
+  &__conrols {
+    display: flex;
+    margin: 0 -8px;
+  }
+
+  &__body {
+    position: relative;
+    margin: -8px;
+  }
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    margin: 0 8px;
+    border-radius: 20px;
+    background: #d9c287;
+    transition: all ease-out 0.3s;
+
+    @media screen and (max-width: 321px) {
+      width: 36px;
+      height: 36px;
+      border-radius: 18px;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    svg {
+      width: 8px;
+      height: 12px;
+      fill: #ffffff;
+    }
+  }
+}
+
+.all-inclusive-slide {
+  display: none;
+  justify-content: space-between;
+  transition: all ease-in 0.3s;
+
+  @media screen and (max-width: 321px) {
+    flex-wrap: wrap;
+  }
+
+  &--active {
+    display: flex;
+    animation: fade-slide 0.3s ease-in;
+  }
+}
+
+.all-inclusive-info-box {
+  display: block;
+  padding: 8px;
+  transition: all ease-in 0.3s;
+
+  @media screen and (max-width: 321px) {
+    margin: 0 0 16px 0;
+  }
+
+  &:hover:not(.all-inclusive-info-box--type-2) {
+    background: #ffffff;
+    box-shadow: 0px 8px 16px rgba(142, 124, 78, 0.16);
+    border-radius: 8px;
+  }
+
+  &__img {
+    border-radius: 8px;
+    margin: 0 0 22px 0;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__info {
+    padding: 0 0 0 17px;
+  }
+
+  &__subtitle {
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #999999;
+    margin: 0 0 24px 0;
+  }
+
+  &__desc {
+    @extend %euclid-300;
+    font-size: 16px;
+    line-height: 24px;
+    color: #666666;
+    margin: 0 0 10px 0;
+
+    @media screen and (max-width: 321px) {
+      font-size: 13px;
+      line-height: 20px;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    font-size: 10px;
+    line-height: 24px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #ab955e;
+
+    span {
+      display: inline-block;
+      background: #ab955e;
+      width: 16px;
+      height: 2px;
+      margin: 0 0 0 8px;
+    }
+  }
+
+  &--type-1 {
+    width: 576px;
+
+    @media screen and (max-width: 321px) {
+      width: 309px;
+    }
+
+    .all-inclusive-info-box {
+      &__img {
+        width: 100%;
+        height: 432px;
+
+        @media screen and (max-width: 321px) {
+          height: 206px;
+        }
+      }
+    }
+  }
+
+  &--type-2 {
+    width: 276px;
+    margin: -9px 0 27px 0;
+
+    @media screen and (max-width: 321px) {
+      display: none;
+    }
+
+    .all-inclusive-info-box {
+      &__desc {
+        @extend %euclid-300;
+        font-size: 24px;
+        line-height: 28px;
+        color: #3d3c3c;
+      }
+    }
+  }
+
+  &--type-3 {
+    width: 276px;
+
+    @media screen and (max-width: 321px) {
+      width: 309px;
+    }
+
+    .all-inclusive-info-box {
+      &__img {
+        width: 100%;
+        height: 176px;
+
+        @media screen and (max-width: 321px) {
+          height: 207px;
+        }
+      }
+    }
+  }
+
+  &--type-4 {
+    width: 276px;
+    margin: -104px 0 0 0;
+
+    @media screen and (max-width: 321px) {
+      width: 309px;
+    }
+
+    .all-inclusive-info-box {
+      &__img {
+        width: 100%;
+        height: 360px;
+        margin-bottom: 15px;
+
+        @media screen and (max-width: 321px) {
+          height: 206px;
+          margin-bottom: 22px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+@import "mixins";
+@import "fonts";
+@import "vars";
+@import "global";
+
+@import "./components/header";
+
+@import "./components/initial";
+@import "./components/choice";
+@import "./components/about-us";
+@import "./components/all-inclusive";
+
+@import "./components/footer";
