@@ -1,4 +1,6 @@
 .choice {
+  position: relative;
+  z-index: 1;
   padding: 0 0 96px 0;
 
   @media screen and (max-width: 321px) {
